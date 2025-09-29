@@ -1,0 +1,221 @@
+/* General Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f6f8fa; /* Light grey background similar to GitHub/LinkedIn */
+    color: #24292e; /* Dark text color */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0366d6; /* Blue link color */
+}
+
+/* --- Profile Layout Container --- */
+.profile-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto; /* Center the profile card */
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 1px 3px rgba(27, 31, 35, 0.04);
+}
+
+/* --- Sidebar (Left Column) Styling --- */
+.sidebar {
+    width: 300px; /* Fixed width for the sidebar */
+    padding: 20px;
+    border-right: 1px solid #e1e4e8;
+    flex-shrink: 0; /* Prevents sidebar from shrinking */
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 1px solid #d1d5da;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.tagline {
+    color: #6a737d;
+    margin-bottom: 15px;
+}
+
+.edit-btn {
+    background-color: #f3f4f6;
+    color: #24292e;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.stats, .contact-links, .organizations {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #e1e4e8;
+    color: #586069;
+}
+
+.contact-links p {
+    margin-bottom: 5px;
+}
+
+.contact-links i {
+    margin-right: 8px;
+    color: #6a737d;
+}
+
+.organizations h2 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #24292e;
+}
+
+.org-list .org-logo {
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    background-color: #f6f8fa;
+}
+
+
+/* --- Main Content (Right Column) Styling --- */
+.main-content {
+    flex-grow: 1; /* Allows main content to take up remaining space */
+    padding: 20px 40px;
+}
+
+.greeting {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e1e4e8;
+    margin-bottom: 20px;
+}
+
+.greeting p:first-child {
+    color: #6a737d;
+    margin-bottom: 5px;
+}
+
+.greeting h2 {
+    font-size: 2em;
+    font-weight: 800;
+    color: #0366d6;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.status-badge {
+    display: inline-block;
+    background-color: #28a745; /* Green color for 'Available' */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0366d6;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section h3 i {
+    margin-right: 8px;
+    color: #0366d6;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #586069;
+}
+
+.tech-icons img {
+    height: 30px; /* Standard size for badge icons */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .profile-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+        margin: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e1e4e8;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .profile-info {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .name, .tagline {
+        text-align: left;
+    }
+
+    .edit-btn {
+        margin-top: 15px;
+    }
+}
