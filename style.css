@@ -15,6 +15,7 @@ body {
 
 a {
     text-decoration: none;
+    font-size: 12px;
     color: #0366d6; /* Blue link color */
 }
 
