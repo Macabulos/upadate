@@ -15,6 +15,9 @@
     --success-color: #28a745;
     --toggle-bg: #f1f3f4;
     --toggle-text: #5f6368;
+    --follow-btn-bg: #2ea44f;
+    --follow-btn-hover: #2c974b;
+    --follow-btn-text: #ffffff;
 }
 
 /* Dark mode variables */
@@ -28,6 +31,9 @@
     --success-color: #3fb950;
     --toggle-bg: #30363d;
     --toggle-text: #c9d1d9;
+    --follow-btn-bg: #238636;
+    --follow-btn-hover: #2ea043;
+    --follow-btn-text: #ffffff;
 }
 
 body {
@@ -134,18 +140,41 @@ a {
     transition: color 0.3s ease;
 }
 
-.edit-btn {
-    background-color: var(--toggle-bg);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    padding: 10px 16px;
+/* Follow Button Styles */
+.follow-btn {
+    background-color: var(--follow-btn-bg);
+    color: var(--follow-btn-text);
+    border: none;
+    padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     width: 100%;
-    margin-bottom: 20px;
-    font-size: 0.9rem;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.follow-btn:hover {
+    background-color: var(--follow-btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.follow-btn:active {
+    transform: translateY(0);
+}
+
+.follow-btn.following {
+    background-color: var(--secondary-color);
+}
+
+.follow-btn.following:hover {
+    background-color: #5d646e;
 }
 
 .stats, .contact-links, .organizations {
@@ -394,6 +423,9 @@ section p {
         --success-color: #008000;
         --toggle-bg: #f1f1f1;
         --toggle-text: #000000;
+        --follow-btn-bg: #006400;
+        --follow-btn-hover: #008000;
+        --follow-btn-text: #ffffff;
     }
     
     [data-theme="dark"] {
@@ -406,5 +438,22 @@ section p {
         --success-color: #00ff00;
         --toggle-bg: #333333;
         --toggle-text: #ffffff;
+        --follow-btn-bg: #00ff00;
+        --follow-btn-hover: #90ee90;
+        --follow-btn-text: #000000;
     }
+}
+
+/* Tech Categories Styles */
+.tech-category {
+    margin-bottom: 25px;
+}
+
+.tech-category h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
 }
